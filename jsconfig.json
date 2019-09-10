@@ -1,0 +1,11 @@
+{
+  "include": ["**/*"],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [".app/web/src/*"]
+    }
+  }
+}

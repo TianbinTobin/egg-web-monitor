@@ -81,7 +81,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-web-monitor --env prod",
+    "start": "npm run build && egg-scripts start --daemon --title=egg-server-web-monitor --env prod",
     "stop": "egg-scripts stop --title=egg-server-web-monitor",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",

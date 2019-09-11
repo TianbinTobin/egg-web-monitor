@@ -89,10 +89,17 @@
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./app && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./app",
+    "lint:prettier": "check-prettier lint",
+    "lint:style": "stylelint --fix \"app/**/*.less\" --syntax less",
+    "prettier": "prettier -c --write \"**/*\"",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "dev:umi": "cross-env APP_ROOT=app/web umi dev",
-    "build": "cross-env APP_ROOT=app/web umi build"
+    "build": "cross-env APP_ROOT=app/web umi build && node ./scripts/copyManifest.js"
   },
   "ci": {
     "version": "10"
